@@ -1,0 +1,197 @@
+:root {
+    --black: #11151f;
+    --dark-grey: #d4d4d4;
+    --grey-blue-hover: #283040;
+    --grey-blue: #374456;
+    --mid-grey: #f1f1f1;
+    --white: #fcfcfc;
+    --yellow: #e5b261;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.content {
+    margin: 1rem;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo {
+    width: 30px;
+    height: auto;
+}
+
+header {
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+h1 {
+    font-size: 18px;
+    padding-left: 0.2rem;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.description {
+    font-size: 14px;
+    padding: 1rem 0;
+}
+
+.your-account h4 {
+    padding-bottom: 0.5rem;
+}
+
+.header {
+    background-color: var(--yellow);
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.field-box {
+    background-color: var(--mid-grey);
+    padding: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.form-content label {
+    display: block;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.pass-req {
+    font-size: 12px;
+}
+
+.all-about-you h4 {
+    padding: 0.5rem 0;
+}
+
+.all-about-you {
+    margin-bottom: 2rem;
+}
+
+button {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    color: white;
+    background-color: var(--grey-blue);
+    border: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--grey-blue-hover);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    text-decoration: underline;
+    color: black;
+}
+
+.footer a:hover {
+    color: black;
+}
+
+/* ON YOUR OWN
+
+    Write a special media query that only applies to the two smallest screen sizes. In these layouts, the brand (the logo and name of the company should):
+
+    1. be positioned at the top of the page
+    2. have white text
+    3. have a drop-shadow on the text
+
+*/
+
+@media screen and (max-width: 600px) {
+
+    .form-fields {
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+}
+
+
+@media (min-width: 320px) and (max-width: 999px) {
+
+    .container {
+        display: block;
+        max-width: 999px;
+        margin: 0 auto;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    header {
+        display: flex;
+        align-items: flex-start;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1rem;
+        color: var(--white);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero img {
+        content: url('../img/work-at-home.webp');
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+    }
+
+    .hero {
+        height: auto;
+    }
+}
+
+@media (min-width: 960px) {
+    .hero img {
+        content: url('../img/work-at-home.webp');
+    }
+}
